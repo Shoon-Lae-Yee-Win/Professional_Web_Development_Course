@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Js</title>
+</head>
+<style>
+    .bar {
+        list-style: none;
+        display: flex;
+        gap: 8px;
+        margin: 0;
+        padding: 10px 10px 0 10px;
+        background-color: deeppink;
+    }
+
+    .bar li {
+        background-color: #fff;
+        padding: 8px 25px;
+        border-radius: 5px 5px 0 0;
+        cursor: pointer;
+    }
+
+    #tb2 {
+        opacity: 0.5;
+    }
+
+    .box {
+        min-height: 220px;
+        border: 2px solid deeppink;
+        border-top: 0 none;
+        padding: 20px;
+    }
+
+    #box2 {
+        display: none;
+    }
+</style>
+<body>
+    <!-- <p>Lorem ipsum dolor sit amet.</p> -->
+    <!-- <button onclick="alert('hii')">Button</button> -->
+    <!-- <button>Button</button> -->
+
+    <!-- <script>
+        document.querySelector("button").onclick = hello;
+        function hello() {
+            // document.querySelector("#nav li.active a[title]");
+            var p = document.querySelector("p");
+            p.textContent = "hello Js";
+            p.style.padding = "20px";
+            p.style.color = "deepskyblue";
+            p.style.background = "deeppink";
+            p.style.borderLeft = "10px solid orange";
+        }
+    </script> -->
+
+    <ul class="bar">
+        <li id="tb1">Tab One</li>
+        <li id="tb2">Tab Two</li>
+    </ul>
+    <div class="box" id="box1">One</div>
+    <div class="box" id="box2">Two</div>
+
+    <script>
+        document.querySelector("#tb1").onclick = one;
+        document.querySelector("#tb2").onclick = two;
+        function one() {
+            document.querySelector("#box2").style.display = "none";
+            document.querySelector("#box1").style.display = "block";
+            document.querySelector("#tb2").style.opacity = 0.5;
+            document.querySelector("#tb1").style.opacity = 1;
+        }
+        function two() {
+            document.querySelector("#box1").style.display = "none";
+            document.querySelector("#box2").style.display = "block";
+            document.querySelector("#tb2").style.opacity = 1;
+            document.querySelector("#tb1").style.opacity = 0.5;
+        }
+    </script>
+</body>
+</html>

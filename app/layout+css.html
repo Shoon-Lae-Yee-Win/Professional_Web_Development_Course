@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout + CSS</title>
+    <style>
+        .wrap {
+            width: 1200px;
+            margin: auto;
+        }
+        header {
+            height: 100px;
+            background: deeppink;
+        }
+        main {
+            display: flex;
+        }
+        nav {
+            height: 200px;
+            width: 200px;
+            background: deepskyblue;
+        }
+        article {
+            height: 200px;
+            width: 800px;
+            background: greenyellow;
+        }
+        aside {
+            height: 200px;
+            width: 200px;
+            background: darkmagenta;
+        }
+        footer {
+            height: 50px;
+            background: grey;
+        }
+        @media (max-width:1200px) {
+            .wrap {
+                width: 100%;
+            }
+            main {
+                flex-wrap: wrap;
+            }
+            nav {
+                height: 50px;
+                width: 100%;
+            }
+            article, aside {
+                width: 50%;
+            }
+        }
+        @media (max-width: 600px) {
+            article, aside {
+                width: 100%;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header></header>
+        <main>
+            <nav></nav>
+            <article></article>
+            <aside></aside>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+</html>
